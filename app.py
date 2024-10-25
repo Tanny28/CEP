@@ -6,25 +6,24 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.ensemble import RandomForestClassifier
+import streamlit.components.v1 as components  # Import Streamlit components
 
 # Page Configuration
 st.set_page_config(page_title="Disease Prediction Dashboard", layout="wide", page_icon="🩺")
 
 # Canva Embed Code
-st.markdown(
+components.html(
     """
-    <div style="text-align: center;">
-        <iframe width="800" height="400" src="<div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGUIKuxKWQ/4ieiuxWMEWG164U4N80sNw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGUIKuxKWQ&#x2F;4ieiuxWMEWG164U4N80sNw&#x2F;view?utm_content=DAGUIKuxKWQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Employee Field Guide</a> by Tanmay Shinde" frameborder="0" allowfullscreen></iframe>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
+     padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+     border-radius: 8px; will-change: transform;">
+      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+        src="https://www.canva.com/design/DAGUIKuxKWQ/4ieiuxWMEWG164U4N80sNw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+      </iframe>
     </div>
+    <a href="https://www.canva.com/design/DAGUIKuxKWQ/4ieiuxWMEWG164U4N80sNw/view?utm_content=DAGUIKuxKWQ&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">Employee Field Guide</a> by Tanmay Shinde
     """,
-    unsafe_allow_html=True
+    height=450,  # Adjust the height as needed
 )
 
 # Disease Prediction Section
